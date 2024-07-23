@@ -215,7 +215,7 @@ int main() {
     setsleeptime();
     setgaptime();
 
-    cout << "\n请将此窗口移动到一边，不要遮挡目标窗口！\n并将鼠标移动至消息发送框！\n不要过左，防止点到聊天方式切换的按钮。" << endl << endl;
+    cout << "\n请将此窗口移动到一边，不要遮挡目标窗口！\n并将鼠标移动至消息发送框！（大约在[ENTER]的E处）\n不要过左，防止点到聊天方式切换的按钮。" << endl << endl;
     wait();
     cout << "\n请不要移动鼠标。\n1秒后获取鼠标位置！" << endl << endl;
     Sleep(1000);
@@ -231,7 +231,7 @@ int main() {
         loop:
         system("cls");
         cout << "请支持作者 Midairlogn ：https://github.com/midairlogn" << endl << endl;
-        cout << "快捷消息：\n1.\tygg pls!(5次）\n2.\tThank you!(3次)\n3.\t自定义。\n请输入对应的数字，不要输入字母：";
+        cout << "快捷消息：\n1.\tygg pls!(5次）\n2.\tThank you!(3次)\n3.\t/squad-leave （1次）\n4.\t自定义。\n请输入对应的数字，不要输入字母：";
         cin >> method;
         switch (method) {
         case 1:
@@ -247,6 +247,12 @@ int main() {
             send_message();
             break;
         case 3:
+            inputString = "/squad-leave ";
+            editclipboard();
+            sendtimes = 1;
+            send_message();
+            break;
+        case 4:
             get_message();
             cout << "\n请输入你想发送消息的次数:";
             cin >> sendtimes;
