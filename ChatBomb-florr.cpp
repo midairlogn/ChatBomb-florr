@@ -231,9 +231,12 @@ int main() {
         loop:
         system("cls");
         cout << "请支持作者 Midairlogn ：https://github.com/midairlogn" << endl << endl;
-        cout << "快捷消息：\n1.\tygg pls!(5次）\n2.\tThank you!(3次)\n3.\t/squad-leave （1次）\n4.\t自定义。\n请输入对应的数字，不要输入字母：";
+        cout << "快捷消息：\n0.\t重新设定程序参数。\n1.\tygg pls!(5次）\n2.\tThank you!(3次)\n3.\t/squad-leave （1次）\n4.\t自定义。\n请输入对应的数字，不要输入字母：";
         cin >> method;
         switch (method) {
+        case 0:
+            system("cls");
+            goto startagain;
         case 1:
             inputString = "ygg pls!";
             editclipboard();
