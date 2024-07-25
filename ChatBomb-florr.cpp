@@ -231,7 +231,7 @@ int main() {
         loop:
         system("cls");
         cout << "请支持作者 Midairlogn ：https://github.com/midairlogn" << endl << endl;
-        cout << "快捷消息：\n0.\t重新设定程序参数。\n1.\tygg pls!(5次）\n2.\tThank you!(3次)\n3.\t/squad-leave （1次）\n4.\t自定义。\n请输入对应的数字，不要输入字母：";
+        cout << "快捷消息：\n0.\t重新设定程序参数。\n1.\tygg pls!(5次）\n2.\tThank you!(2次)\n3.\t/squad-leave （1次）\n4.\tSorry.I don't have ygg!\n5.\t自定义。\n请输入对应的数字，不要输入字母：";
         cin >> method;
         switch (method) {
         case 0:
@@ -246,7 +246,7 @@ int main() {
         case 2:
             inputString = "Thank you!";
             editclipboard();
-            sendtimes = 3;
+            sendtimes = 2;
             send_message();
             break;
         case 3:
@@ -256,6 +256,12 @@ int main() {
             send_message();
             break;
         case 4:
+            inputString = "Sorry . I don't have ygg!";
+            editclipboard();
+            sendtimes = 1;
+            send_message();
+            break;
+        case 5:
             get_message();
             cout << "\n请输入你想发送消息的次数:";
             cin >> sendtimes;
